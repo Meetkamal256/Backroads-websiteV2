@@ -112,6 +112,7 @@ nav {
 
 .nav-items {
   padding-right: 0.75rem;
+  text-transform: capitalize;
   letter-spacing: 5px;
   color: var(--clr-grey-3);
   transition: all 0.3s;
