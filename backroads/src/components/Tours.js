@@ -9,7 +9,8 @@ function Tours() {
       {/* <!-- Tour section container --> */}
       <div className="tour-container">
         {tours.map((tour) => {
-          const {id, image, date, title, info, location, duration, price} = tour
+          const { id, image, date, title, info, location, duration, price } =
+            tour;
           return (
             <article className="tour-card" key={id}>
               <div className="tour-img-container">
@@ -19,9 +20,7 @@ function Tours() {
               <div className="tour-info">
                 <div className="tour-title">
                   <h4>{title}</h4>
-                  <p>
-                    {info}
-                  </p>
+                  <p>{info}</p>
                 </div>
                 <div className="tour-footer">
                   <p>
