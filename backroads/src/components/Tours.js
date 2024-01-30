@@ -29,7 +29,7 @@ function Tours() {
                     </span>{" "}
                     {location}
                   </p>
-                  <p>6 days</p>
+                  <p>{duration}</p>
                   <p>from {price}</p>
                 </div>
               </div>
