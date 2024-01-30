@@ -1,18 +1,16 @@
 import React from "react";
+import aboutImg from "../images/about.jpeg";
+import Title from "./Title";
 
 function About() {
   return (
     <section id="about" className="section">
-      <div className="section-title">
-        <h2>
-          About <span>us</span>
-        </h2>
-      </div>
+      <Title title="about" subTitle=" us" />
 
       {/* <!-- container for image and content --> */}
       <div className="aboutus-container">
         <div className="image">
-          <img src="images/about.jpeg" alt="About Us Image" />
+          <img src={aboutImg} alt=''/>
         </div>
         <div className="content">
           <h2>Explore The Difference</h2>
