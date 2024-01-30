@@ -22,10 +22,10 @@ function Navbar() {
           );
         })}
       </ul>
-      
+
       <ul className="nav-icons">
         {socialLinks.map((link) => {
-          const {id, href, icon} = link
+          const { id, href, icon } = link;
           return (
             <li key={id}>
               <a href={href} target="_blank" className="nav-icon">
