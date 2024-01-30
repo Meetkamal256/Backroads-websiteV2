@@ -93,7 +93,7 @@ a {
 
 nav {
   display: flex;
-  align-tems: center;
+  align-items: center;
   justify-content: space-between;
   background-color: #fff;
   box-shadow: var(--dark-shadow);

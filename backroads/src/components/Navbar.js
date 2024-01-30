@@ -1,103 +1,105 @@
-import React from "react";
+import React, { Component } from "react";
 import logo from "../images/logo.svg";
 import { pageLinks } from "../data";
 import { socialLinks } from "../data";
 
-function Navbar() {
-  return (
-    <nav>
-      <div className="logo">
-        <a href="#">
-          <img src={logo} alt="" />
-        </a>
-      </div>
-      <ul className="nav-links">
-        {pageLinks.map((link) => {
-          return (
+class Navbar extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isMobileMenuOpen: false,
+    };
+  }
+
+  toggleMobileMenu = () => {
+    this.setState((prevState) => ({
+      isMobileMenuOpen: !prevState.isMobileMenuOpen,
+    }));
+  };
+
+  closeMobileMenu = () => {
+    this.setState({ isMobileMenuOpen: false });
+  };
+
+  render() {
+    const { isMobileMenuOpen } = this.state;
+
+    return (
+      <nav>
+        <div className="logo">
+          <a href="#">
+            <img src={logo} alt="" />
+          </a>
+        </div>
+        <ul className="nav-links">
+          {pageLinks.map((link) => (
             <li key={link.id}>
-              <a href={link.href} className="nav-items">
+              <a
+                href={link.href}
+                className="nav-items"
+                onClick={this.closeMobileMenu}
+              >
                 {link.text}
               </a>
             </li>
-          );
-        })}
-      </ul>
-
-      <ul className="nav-icons">
-        {socialLinks.map((link) => {
-          const { id, href, icon } = link;
-          return (
-            <li key={id}>
-              <a href={href} target="_blank" className="nav-icon">
-                <i className={icon}></i>
-              </a>
-            </li>
-          );
-        })}
-      </ul>
-      {/* <!-- Hamburger button --> */}
-      <button id="menu-btn" className="hamburger" type="button">
-        <span className="hamburger-top"></span>
-        <span className="hamburger-middle"></span>
-        <span className="hamburger-bottom"></span>
-      </button>
-      {/*       
-      <!-- Mobile Menu --> */}
-      <div className="mobile-menu" id="menu">
-        <ul className="mobile-nav-links">
-          <li>
-            <a href="#home" className="nav-items">
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="#about" className="nav-items">
-              About
-            </a>
-          </li>
-          <li>
-            <a href="#services" className="nav-items">
-              Services
-            </a>
-          </li>
-          <li>
-            <a href="#tours" className="nav-items">
-              Tours
-            </a>
-          </li>
+          ))}
         </ul>
         <ul className="nav-icons">
-          <li>
-            <a
-              href="https://www.twitter.com"
-              target="_blank"
-              className="nav-icon"
-            >
-              <i className="fab fa-facebook"></i>
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.twitter.com"
-              target="_blank"
-              className="nav-icon"
-            >
-              <i className="fab fa-twitter"></i>
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.twitter.com"
-              target="_blank"
-              className="nav-icon"
-            >
-              <i className="fab fa-squarespace"></i>
-            </a>
-          </li>
+          {socialLinks.map((link) => (
+            <li key={link.id}>
+              <a href={link.href} target="_blank" className="nav-icon">
+                <i className={link.icon}></i>
+              </a>
+            </li>
+          ))}
         </ul>
-      </div>
-    </nav>
-  );
+        <button
+          id="menu-btn"
+          className={`hamburger ${isMobileMenuOpen ? "open" : ""}`}
+          type="button"
+          onClick={this.toggleMobileMenu}
+        >
+          <span className="hamburger-top"></span>
+          <span className="hamburger-middle"></span>
+          <span className="hamburger-bottom"></span>
+        </button>
+        <div
+          className={`mobile-menu ${isMobileMenuOpen ? "open" : ""}`}
+          id="menu"
+        >
+          <ul className="mobile-nav-links">
+            {pageLinks.map((link) => {
+              const { id, href, text } = link;
+              return (
+                <li key={id}>
+                  <a
+                    href={href}
+                    className="nav-items"
+                    onClick={this.closeMobileMenu}
+                  >
+                    {text}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+
+          <ul className="nav-icons">
+            {socialLinks.map((link) => {
+              const { id, href, icon } = link;
+              return (
+                <li key={id}>
+                  <a href={href} target="_blank" className="nav-icon">
+                    <i className={icon}></i>
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </nav>
+    );
+  }
 }
 
 export default Navbar;
