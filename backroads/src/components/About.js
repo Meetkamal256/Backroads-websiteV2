@@ -5,7 +5,7 @@ import Title from "./Title";
 function About() {
   return (
     <section id="about" className="section">
-      <Title title="about" subTitle=" us" />
+      <Title title="about" subTitle="us" />
 
       {/* <!-- container for image and content --> */}
       <div className="aboutus-container">

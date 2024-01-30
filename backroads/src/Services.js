@@ -1,13 +1,10 @@
 import React from "react";
+import Title from "./components/Title";
 
 function Services() {
   return (
     <section className="section services" id="services">
-      <div className="section-title">
-        <h2>
-          Our <span>Services</span>
-        </h2>
-      </div>
+      <Title title="our" subTitle="services" />
       <div className="services-menu">
         <article className="service">
           <span className="service-icon">
@@ -21,7 +18,7 @@ function Services() {
             </p>
           </div>
         </article>
-        
+
         <article className="service">
           <span className="service-icon">
             <i className="fas fa-tree fa-fw"></i>
@@ -34,7 +31,7 @@ function Services() {
             </p>
           </div>
         </article>
-        
+
         <article className="service">
           <span className="service-icon">
             <i className="fas fa-socks fa-fw"></i>
