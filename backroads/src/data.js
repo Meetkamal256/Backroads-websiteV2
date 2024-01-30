@@ -10,3 +10,24 @@ export const socialLinks = [
   { id: 2, href: "https://www.twitter.com", icon: "fab fa-twitter" },
   { id: 3, href: "https://www.twitter.com", icon: "fab fa-squarespace" },
 ];
+
+export const services = [
+  {
+    id: 1,
+    icon: "fas fa-wallet fa-fw",
+    title: "Saving Money",
+    text: "  Affordable travel experiences tailored to your budget, ensuring you get the most value for your money.",
+  },
+  {
+    id: 2,
+    icon: "fas fa-tree fa-fw",
+    title: "Endless Hiking<",
+    text: "Explore breathtaking trails and scenic landscapes with our diverse hiking options suitable for all skill levels.",
+  },
+  {
+    id: 3,
+    icon: "fas fa-socks fa-fw",
+    title: "Saving Money",
+    text: "  Experience comfort like never before with cozy lodgings, well-appointed rooms, and attentive service.",
+  },
+];

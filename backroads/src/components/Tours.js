@@ -35,7 +35,7 @@ function Tours() {
             </div>
           </div>
         </article>
-
+        
         <article className="tour-card">
           <div className="tour-img-container">
             <img src="images/tour-2.jpeg" className="tour-img" alt="" />
@@ -52,7 +52,7 @@ function Tours() {
                 memories in this diverse and captivating destination.
               </p>
             </div>
-
+            
             <div className="tour-footer">
               <p>
                 <span>
@@ -65,7 +65,7 @@ function Tours() {
             </div>
           </div>
         </article>
-
+        
         <article className="tour-card">
           <div className="tour-img-container">
             <img src="images/tour-1.jpeg" className="tour-img" alt="" />
@@ -82,7 +82,7 @@ function Tours() {
                 memories.
               </p>
             </div>
-
+            
             <div className="tour-footer">
               <p>
                 <span>
