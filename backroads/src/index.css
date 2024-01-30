@@ -527,7 +527,7 @@ nav {
   .hero-banner {
     padding: 0;
   }
-
+  
   .hero-banner p {
     max-width: 45rem;
   }
@@ -537,7 +537,7 @@ nav {
   .hero {
     min-height: 70vh;
   }
-
+  
   .hero-banner {
     padding: 0 2rem;
   }
@@ -551,12 +551,12 @@ nav {
   nav {
     padding: 15px;
   }
-
+  
   .nav-links,
   .nav-icons {
     display: none; /* Hide desktop menu items and icons on smaller screens */
   }
-
+  
   .hamburger {
     display: block;
   }
@@ -576,23 +576,23 @@ nav {
     padding: 5rem 0;
     scroll-margin-top: 4rem;
   }
-
+  
   .aboutus-container {
     flex-direction: column;
     padding: 0px 20px;
   }
-
+  
   .section-title h2 {
     text-transform: uppercase;
     font-size: 30px;
   }
-
+  
   .content h2 {
     margin-bottom: 15px;
     letter-spacing: 4px;
     font-size: 18px;
   }
-
+  
   .content p {
     margin-bottom: 20px;
     color: var(--clr-grey-5);
@@ -612,7 +612,7 @@ nav {
   .section {
     margin: 0 auto;
   }
-
+  
   .services-menu {
     grid-template-columns: 1fr;
   }
@@ -625,12 +625,16 @@ nav {
   .services-menu {
     grid-template-columns: 1fr 1fr;
   }
+   .service-icon {
+    margin-bottom: 1rem;
+  }
 }
 
 @media screen and (min-width: 992px) {
   .services-menu {
     grid-template-columns: 1fr 1fr 1fr;
   }
+
 }
 
 @media screen and (min-width: 1170px) {
@@ -638,7 +642,7 @@ nav {
     display: flex;
     text-align: left;
   }
-
+  
   .service-info {
     padding-left: 1rem;
   }
